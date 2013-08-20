@@ -28,12 +28,13 @@ class CharMgmnt
     */
 	public function get_character_list($data)
 	{
-		if(isset($data['appid']) && $data['appid'] == $config->app_id)
+		if(isset($data['appid']) && $data['appid'] == $this->config->app_id)
 		{
 			if(isset($data['username']))
 			{
-				$sql = "select c_id from charac0 where c_sheadera = '$username'";
-				$query = odbc_exec($config->con, $sql);
+				$username = $data['username'];
+				$sql = "select c_id from charac0 where c_sheadera = '$username' and c_status = 'A'";
+				$query = odbc_exec($this->config->con, $sql);
 				$num_rows = odbc_num_rows($query);
 				if($num_rows != 0)
 				{
@@ -62,7 +63,7 @@ class CharMgmnt
     */
 	public function get_character_details($data)
 	{
-		if(isset($data['appid']) && $data['appid'] == $config->app_id)
+		if(isset($data['appid']) && $data['appid'] == $this->config->app_id)
 		{
 		}
 		else
@@ -75,7 +76,7 @@ class CharMgmnt
     */
 	public function character_exists($data)
 	{
-		if(isset($data['appid']) && $data['appid'] == $config->app_id)
+		if(isset($data['appid']) && $data['appid'] == $this->config->app_id)
 		{
 		}
 		else
@@ -88,7 +89,7 @@ class CharMgmnt
     */
 	public function update_character_rebirth($data)
 	{
-		if(isset($data['appid']) && $data['appid'] == $config->app_id)
+		if(isset($data['appid']) && $data['appid'] == $this->config->app_id)
 		{
 		}
 		else
@@ -101,7 +102,7 @@ class CharMgmnt
     */
 	public function get_character_inventory($data)
 	{
-		if(isset($data['appid']) && $data['appid'] == $config->app_id)
+		if(isset($data['appid']) && $data['appid'] == $this->config->app_id)
 		{
 		}
 		else

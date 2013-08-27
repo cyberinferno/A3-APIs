@@ -10,3 +10,5 @@ RESTful APIs for A3 MMORPG
 * All suggestions are welcome.
 
 RestServer.php code was got from http://jacwright.com/250/simple-rest-server-in-php-supports-json-amf/
+
+For converting rewrite rules of Apache to Nginx please use http://winginx.com/htaccess
